@@ -13,9 +13,9 @@ public class MainApp {
 	static SimpleDriverDataSource dataSourceObj;
 	
 	// Database Configuration Parameters
-	static String DB_USERNAME = "root";
-	static String DB_PASSWORD = "";
-	static String DB_URL = "jdbc:mysql://localhost:3306/contactdb";
+	static String DB_USERNAME = "demo";
+	static String DB_PASSWORD = "demo";
+	static String DB_URL = "jdbc:mysql://192.168.129.130:3306/contactdb";
 	
 	public static SimpleDriverDataSource getDatabaseConnection(){
 		dataSourceObj = new SimpleDriverDataSource();
