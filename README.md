@@ -1,4 +1,4 @@
-# JavaProjects
+# JavaDemos
 
 
 Spring JdbcTemplate CRUD Operations Tutorial
