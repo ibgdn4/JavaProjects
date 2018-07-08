@@ -39,29 +39,29 @@ public class ReadExcelFile {
                 Iterator rowIterator = sheet.iterator();
 
                 // Iterator over each row.
-                while (rowIterator.hasNext()){
+                while (rowIterator.hasNext()) {
                     Student student = new Student();
                     Row row = (Row) rowIterator.next();
                     Iterator cellIterator = row.cellIterator();
 
                     // Iterating over each row.
-                    while(cellIterator.hasNext()){
+                    while (cellIterator.hasNext()) {
                         Cell cell = (Cell) cellIterator.next();
                         // The cell containing String will is name.
-                        if(Cell.CELL_TYPE_STRING == cell.getCellType()){
+                        if (Cell.CELL_TYPE_STRING == cell.getCellType()) {
                             student.setName(cell.getStringCellValue());
                             // The cell containing numeric value will contain marks.
-                        } else if (Cell.CELL_TYPE_NUMERIC == cell.getCellType()){
+                        } else if (Cell.CELL_TYPE_NUMERIC == cell.getCellType()) {
                             // Cell with index 1 contains marks in Maths.
-                            if(cell.getColumnIndex() == 1){
+                            if (cell.getColumnIndex() == 1) {
                                 student.setMaths(String.valueOf(cell.getNumericCellValue()));
                             }
                             // Cell with index 2 contains marks in Science.
-                            else if(cell.getColumnIndex() == 2){
+                            else if (cell.getColumnIndex() == 2) {
                                 student.setScience(String.valueOf(cell.getNumericCellValue()));
                             }
                             // Cell with index 3 contains marks in English.
-                            else if(cell.getColumnIndex() == 3){
+                            else if (cell.getColumnIndex() == 3) {
                                 student.setEnglish(String.valueOf(cell.getNumericCellValue()));
                             }
                         }
