@@ -50,6 +50,7 @@ hs_err_pid*
 
 # IntelliJ
 /out/
+*/*.iml
 
 ### Maven template
 target/
@@ -61,9 +62,13 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+*/.mvn/*
+*/mvn*
+*/src/test/*
+
 # ignore eclipse files
 .project
 .classpath
 .settings
 .metadata
-.settings  
+.settings
