@@ -8,11 +8,17 @@ spring:
     show-sql: true
 server:
 context-path: /sell
-logging:
-  pattern:
-    level: debug
-    console: "%d - %msg%n"
-#    path: /var/log/tomcat
-# 默认文件名称是 spring.log D:\spring.log
-  path: D:\
-#  file: D:\sell.log
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##    path: /var/log/tomcat
+## 默认文件名称是 spring.log D:\spring.log，path 和 file 配置一个即可。
+#  path: D:\
+##  file: D:\sell.log
+#
+## 日志级别
+#  level:
+##    全局设定日志级别
+##    root: debug
+##    设置单个类的日志级别
+##    com.springbootwx.sell: debug
