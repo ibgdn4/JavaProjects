@@ -1,5 +1,6 @@
 package com.springbootwx.sell.dataobject;
 
+import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -15,6 +16,7 @@ import java.util.Date;
  */
 @Entity // 映射为对象
 //@DynamicUpdate // 动态更新（执行修改操作时，修改时间同时更新）
+@Data
 public class ProductCategory {
 
     // 类目 id
@@ -31,6 +33,14 @@ public class ProductCategory {
     // 修改时间
     @LastModifiedDate
     private Date updateTime;
+
+    public ProductCategory(String s, int i) {
+        this.categoryName = s;
+        this.categoryType = i;
+    }
+
+    public ProductCategory() {
+    }
 
 
     public Integer getCategoryId() {
