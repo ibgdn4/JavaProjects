@@ -23,13 +23,17 @@ public class ProductCategory {
     @Id // 主键 id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 自增长
     private Integer categoryId;
+
     // 类目名称
     private String categoryName;
+
     // 类目标号
     private Integer categoryType;
+
     // 创建时间
     @CreatedDate
     private Date createTime;
+
     // 修改时间
     @LastModifiedDate
     private Date updateTime;
